@@ -1,75 +1,203 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+        <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+        <meta name="viewport" content="width=device-width">
+        <!-- End SlidesJS Required -->
 
-    <title>bells.github.com by bells</title>
-  </head>
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-  <body>
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheets/example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css" media="screen" />
+-->
+        <!-- SlidesJS Optional: If you'd like to use this design -->
+        <style>
+            body {
+                -webkit-font-smoothing: antialiased;
+                font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+                color: #232525;
+                padding-top:70px;
+            }
 
-    <header>
-      <div class="container">
-        <h1>bells.github.com</h1>
-        <h2>i write program</h2>
+            #slides,
+            #slides2 {
+                display: none;
+                margin-bottom:50px;
+            }
 
-        <section id="downloads">
-          <a href="https://github.com/bells" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+            .slidesjs-navigation {
+                margin-top:3px;
+            }
 
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            .slidesjs-previous {
+                margin-right: 5px;
+                float: left;
+            }
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            .slidesjs-next {
+                margin-right: 5px;
+                float: left;
+            }
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+            .slidesjs-pagination {
+                margin: 6px 0 0;
+                float: right;
+                list-style: none;
+            }
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+            .slidesjs-pagination li {
+                float: left;
+                margin: 0 1px;
+            }
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+            .slidesjs-pagination li a {
+                display: block;
+                width: 13px;
+                height: 0;
+                padding-top: 13px;
+                background-image: url(images/pagination.png);
+                background-position: 0 0;
+                float: left;
+                overflow: hidden;
+            }
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+            .slidesjs-pagination li a.active,
+            .slidesjs-pagination li a:hover.active {
+                background-position: 0 -13px
+            }
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+            .slidesjs-pagination li a:hover {
+                background-position: 0 -26px
+            }
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+            a:link,
+            a:visited {
+                color: #333
+            }
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+            a:hover,
+            a:active {
+                color: #9e2020
+            }
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+            .navbar {
+                overflow: hidden
+            }
+        </style>
+        <!-- End SlidesJS Optional-->
+        <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+        <style>
+            #slides {
+                display: none
+            }
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+            .container1 {
+                margin: 0 auto
+            }
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+            /* For tablets & smart phones */
+            @media (max-width: 767px) {
+                body {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .container1 {
+                    width: auto
+                }
+            }
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("0929");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+            /* For smartphones */
+            @media (max-width: 480px) {
+                .container1 {
+                    width: auto
+                }
+            }
 
-  </body>
+            /* For smaller displays like laptops */
+            @media (min-width: 768px) and (max-width: 979px) {
+                .container1 {
+                    width: 724px
+                }
+            }
+
+            /* For larger displays */
+            @media (min-width: 1200px) {
+                .container1 {
+                    width: 1170px
+                }
+            }
+        </style>
+
+        <script src="javascripts/jquery-2.0.0.min.js"></script>
+        <script src="javascripts/jquery.slides.min.js"></script>
+        <script>
+            $(function() {
+                $('#slides').slidesjs({
+                    width: 200,
+                    height: 100,
+                    navigation: false,
+                    play: {
+                        active: true,
+                        auto: true,
+                        interval: 3000,
+                        swap: true
+                    }
+                });
+
+                $('#slides2').slidesjs({
+                    width: 200,
+                    height: 100,
+                    navigation: false,
+                    start: 3,
+                    play: {
+                        active: true,
+                        auto: true,
+                        interval: 3000,
+                        swap: true
+                    }
+                });
+            });
+        </script>
+
+        <title>bells.github.com by bells</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <h1>bells.github.com</h1>
+                <h2>i write program</h2>
+
+                <section id="downloads">
+                    <a href="https://github.com/bells" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+                </section>
+            </div>
+        </header>
+
+        <div class="container1">
+            <div id="slides">
+                <img src="images/java.jpg" alt="java" />
+                <img src="images/python.jpg" alt="python" />
+                <img src="images/javascript.jpg" alt="javascript" />
+                <img src="images/vimer.jpg" alt="vimer" />
+                <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+            </div>
+            <div id="slides2">
+                <img src="images/you1.jpg" alt="you1" />
+                <img src="images/you2.jpg" alt="you2" />
+                <img src="images/youandme.jpg" alt="youandme" />
+                <img src="images/me1.jpg" alt="me1" />
+                <img src="images/me2.jpg" alt="me2" />
+                <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+            </div>
+        </div>
+    </body>
 </html>
