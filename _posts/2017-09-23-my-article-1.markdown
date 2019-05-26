@@ -1,8 +1,0 @@
----
-layout: default 
-title:  "这是我的第一篇文章"
-date:   2017-09-23 17:57:33 +0800
-categories: test
----
-
-这是我自己的内容，哈哈，加油！
