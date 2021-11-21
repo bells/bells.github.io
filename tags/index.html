@@ -17,7 +17,7 @@
   },
   "name":"watson的技术...",
   "description":"watson zhu",
-  "url":"https:\/\/example.org\/",
+  "url":"https:\/\/example.org\/tags\/",
   "keywords":"[]"
 }
 
@@ -33,10 +33,10 @@
 
 <meta property="og:description" content="watson zhu">
 <meta property="og:type" content="website">
-<meta property="og:title" content="watson的技术...">
-<meta name="twitter:title" content="watson的技术...">
-<meta property="og:url" content="https://example.org/">
-<meta property="twitter:url" content="https://example.org/">
+<meta property="og:title" content="Tags">
+<meta name="twitter:title" content="Tags">
+<meta property="og:url" content="https://example.org/tags/">
+<meta property="twitter:url" content="https://example.org/tags/">
 <meta property="og:site_name" content="watson的技术...">
 <meta property="og:description" content="watson zhu">
 <meta name="twitter:description" content="watson zhu">
@@ -63,16 +63,16 @@
 
 
 
-    <title>watson的技术...</title>
+    <title>Tags</title>
 
     <link rel="icon" href="https://example.org/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/tags/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://example.org/">
+    <link rel="canonical" href="https://example.org/tags/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -238,76 +238,47 @@ if (!doNotTrack) {
         class="
                hasCoverMetaIn
                ">
-        <section class="postShorten-group main-content-wrap">
-          
-          
-            
-  
-    
-  
 
+        <div id="tags-archives" class="main-content-wrap">
+          <form id="filter-form" action="#">
+            <input name="tag" type="text" class="form-control input--xlarge" placeholder="Search tag" autofocus="autofocus">
+          </form>
+          <h4 class="archive-result text-color-base text-xlarge"
+              data-message-zero="no tag found"
+              data-message-one="1 tag found"
+              data-message-other="{n} tags found"></h4>
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-left">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://example.org/post/es_plugin/" aria-label="Open the post: 开发ElasticSearch插件就是这么简单">
-      
-          开发ElasticSearch插件就是这么简单
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-11-21T00:00:00Z">
-        
+            <section>
+              
+                <a class="tag tag--primary tag--small" href="#elasticsearch-list" data-tag="elasticsearch">
+                  elasticsearch
+                </a>
+              
+            </section>
+            <section class="boxes">
+              
+                <div id="elasticsearch-list" class="archive box" data-tag="elasticsearch">
+                  <h4 class="archive-title">
+                    <a class="link-unstyled" href="elasticsearch">
+                      elasticsearch (1)
+                    </a>
+                  </h4>
+                  <ul class="archive-posts">
+                    
+                      <li class="archive-post">
+                        <a class="archive-post-title" href="https://example.org/post/es_plugin/">
+                          开发ElasticSearch插件就是这么简单
+                        </a>
+                        <span class="archive-post-date"> - 
   November 21, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://example.org/categories/elasticsearch">ElasticSearch</a>, 
-    
-      <a class="category-link" href="https://example.org/categories/%e6%8f%92%e4%bb%b6">插件</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p>目前es应用非常广泛，作为搜索、数据分析引擎，功能非常强大。其中插件功能是非常重要的一块，本文以自己开发的插件为切入点，简单阐述es插件原理及如何开发。</p>
-      
-      <p>
-        
-          <a href="https://example.org/post/es_plugin/" class="postShorten-excerpt_link link" aria-label="Open the post: 开发ElasticSearch插件就是这么简单">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://example.org/post/es_plugin/" aria-label="Open the post: 开发ElasticSearch插件就是这么简单">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" src="https://example.org/image/es_plugin/es_start.png"/>
-      </div>
-    </a>
-  
-</article>
-
-          
-          
-
-        </section>
+</span>
+                      </li>
+                    
+                  </ul>
+                </div>
+              
+           </section>
+         </div>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2021 <a href="https://github.com/bells">watson, bells</a>. All Rights Reserved
@@ -316,7 +287,6 @@ if (!doNotTrack) {
 
       </div>
     </div>
-    
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
@@ -347,8 +317,6 @@ if (!doNotTrack) {
 </div>
 
     
-
-    
   
     
       <div id="cover" style="background-image:url('https://example.org/images/cover.jpg');"></div>
@@ -356,7 +324,8 @@ if (!doNotTrack) {
   
 
 
-    
+  </body>
+  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -423,7 +392,4 @@ $(document).ready(function() {
 
 
 
-    
-  </body>
 </html>
-
