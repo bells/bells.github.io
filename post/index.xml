@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on watson的技术...</title>
-    <link>https://example.org/post/</link>
+    <link>https://bells.github.io/post/</link>
     <description>Recent content in Posts on watson的技术...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bells.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开发ElasticSearch插件就是这么简单</title>
-      <link>https://example.org/post/es_plugin/</link>
+      <link>https://bells.github.io/post/es_plugin/</link>
       <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/post/es_plugin/</guid>
+      <guid>https://bells.github.io/post/es_plugin/</guid>
       <description>&lt;p&gt;目前es应用非常广泛，作为搜索、数据分析引擎，功能非常强大。其中插件功能是非常重要的一块，本文以自己开发的插件为切入点，简单阐述es插件原理及如何开发。&lt;/p&gt;</description>
     </item>
     
