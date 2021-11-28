@@ -306,7 +306,6 @@ if (!doNotTrack) {
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <p>目前es应用非常广泛，作为搜索、数据分析引擎，功能非常强大。其中插件功能是非常重要的一块，本文以自己开发的插件为切入点，简单阐述es插件原理及如何开发。</p>
-<h1 id="开发elasticsearch插件就是这么简单">开发ElasticSearch插件就是这么简单</h1>
 <h2 id="背景">背景：</h2>
 <p>前几年工作中用es来作为站内app的搜索，顺便开发了一个动态更新同义词的插件: <a href="https://github.com/bells/elasticsearch-analysis-dynamic-synonym">elasticsearch-analysis-dynamic-synonym</a>， es本身是支持同义词配置(<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html">Synonym token filter</a>)，但是不允许动态更新同义词词库，每次更新后需要重启每个es节点，比较麻烦。注意：阅读本文需要对es有一定的了解。</p>
 <h2 id="插件类型">插件类型：</h2>
