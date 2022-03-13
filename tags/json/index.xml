@@ -9,14 +9,16 @@
     <lastBuildDate>Sun, 13 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bells.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>需要记录的技术技巧点2022-0102</title>
-      <link>https://bells.github.io/post/2022-01/</link>
+      <link>https://bells.github.io/post/format/</link>
       <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://bells.github.io/post/2022-01/</guid>
+      <guid>https://bells.github.io/post/format/</guid>
       <description>&lt;p&gt;记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：&lt;/p&gt;
-&lt;p&gt;​       如何在本地快速格式化json、sql&lt;/p&gt;
-&lt;p&gt;​       sublime开启vim模式&lt;/p&gt;
-&lt;p&gt;​       mysql字符集是否区分大小写以及全角半角括号等&lt;/p&gt;</description>
+&lt;ol&gt;
+&lt;li&gt;如何在本地快速格式化json、sql&lt;/li&gt;
+&lt;li&gt;sublime开启vim命令模式&lt;/li&gt;
+&lt;li&gt;mysql字符集是否区分大小写&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
   </channel>
