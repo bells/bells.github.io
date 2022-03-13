@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/bells.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "watson zhu(bells)",
+    
+    "image": "https://bells.github.io/image/avatar.png"
+    
+  },
+  "name":"watson的技术...",
+  "description":"\u003cp\u003e记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：\u003c\/p\u003e\n\u003cp\u003e​       如何在本地快速格式化json、sql\u003c\/p\u003e\n\u003cp\u003e​       sublime开启vim模式\u003c\/p\u003e\n\u003cp\u003e​       mysql字符集是否区分大小写以及全角半角括号等\u003c\/p\u003e",
+  "url":"https:\/\/bells.github.io\/post\/2022-01\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="watson zhu(bells)">
+<meta name="keywords" content="">
+<meta name="description" content="记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：
+​       如何在本地快速格式化json、sql
+​       sublime开启vim模式
+​       mysql字符集是否区分大小写以及全角半角括号等">
+
+
+<meta property="og:description" content="记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：
+​       如何在本地快速格式化json、sql
+​       sublime开启vim模式
+​       mysql字符集是否区分大小写以及全角半角括号等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="需要记录的技术技巧点2022-0102">
+<meta name="twitter:title" content="需要记录的技术技巧点2022-0102">
+<meta property="og:url" content="https://bells.github.io/post/2022-01/">
+<meta property="twitter:url" content="https://bells.github.io/post/2022-01/">
+<meta property="og:site_name" content="watson的技术...">
+<meta property="og:description" content="记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：
+​       如何在本地快速格式化json、sql
+​       sublime开启vim模式
+​       mysql字符集是否区分大小写以及全角半角括号等">
+<meta name="twitter:description" content="记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：
+​       如何在本地快速格式化json、sql
+​       sublime开启vim模式
+​       mysql字符集是否区分大小写以及全角半角括号等">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-03-13T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2022-03-13T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="技术技巧">
+    
+  
+  
+    
+      <meta property="article:tag" content="格式化">
+    
+      <meta property="article:tag" content="json">
+    
+      <meta property="article:tag" content="mysql">
+    
+      <meta property="article:tag" content="sublime">
+    
+      <meta property="article:tag" content="Pretty JSON">
+    
+      <meta property="article:tag" content="jq">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@bellszhu">
+
+
+  <meta name="twitter:creator" content="@bellszhu">
+
+
+
+
+
+
+  <meta property="og:image" content="https://bells.github.io/image/avatar.png">
+  <meta property="twitter:image" content="https://bells.github.io/image/avatar.png">
+
+
+
+
+  <meta property="og:image" content="https://bells.github.io/image/es_plugin/es_start.png">
+  <meta property="twitter:image" content="https://bells.github.io/image/es_plugin/es_start.png">
+
+
+  <meta property="og:image" content="https://bells.github.io/image/es_plugin/es_start.png">
+  <meta property="twitter:image" content="https://bells.github.io/image/es_plugin/es_start.png">
+
+
+    <title>需要记录的技术技巧点2022-0102</title>
+
+    <link rel="icon" href="https://bells.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://bells.github.io/post/2022-01/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://bells.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-106923489-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://bells.github.io/" aria-label="Go to homepage">watson的技术...</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://bells.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://bells.github.io/image/avatar.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://bells.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://bells.github.io/image/avatar.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">watson zhu(bells)</h4>
+        
+          <h5 class="sidebar-profile-bio">keep the faith!</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/bells" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1377511/bells" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bells.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/image/es_plugin/es_start.png')"
+       data-behavior="4">
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      需要记录的技术技巧点2022-0102
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-03-13T00:00:00Z">
+        
+  March 13, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://bells.github.io/categories/%e6%8a%80%e6%9c%af%e6%8a%80%e5%b7%a7">技术技巧</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>记录下2022年1月、2月遇到的需要记录的技术技巧点，这次包括主题：</p>
+<p>​       如何在本地快速格式化json、sql</p>
+<p>​       sublime开启vim模式</p>
+<p>​       mysql字符集是否区分大小写以及全角半角括号等</p>
+<h2 id="如何在本地快速格式化jsonsql">如何在本地快速格式化json、sql</h2>
+<h3 id="格式化json">格式化json</h3>
+<ol>
+<li>sublime插件<a href="https://packagecontrol.io/packages/Pretty%20JSON">Pretty JSON</a>:</li>
+</ol>
+<p>具体安装方法见：https://packagecontrol.io/packages/Pretty%20JSON</p>
+<p>效果：</p>
+<p>当我们把json文本放到sublime中，可以输入快捷键：command+shift+p，然后再输入json，就会出现Pretty JSON提供的各种工具</p>
+<p>![image-20220122152707120](/Users/bells/Library/Application Support/typora-user-images/image-20220122152707120.png)</p>
+<p>选中Pretty JSON: Format JSON 直接按enter建，即可：</p>
+<p>![image-20220122152912984](/Users/bells/Library/Application Support/typora-user-images/image-20220122152912984.png)</p>
+<ol start="2">
+<li>
+<p><a href="https://github.com/stedolan/jq">jq</a>命令行工具</p>
+<p>具体安装方法见：https://github.com/stedolan/jq</p>
+<p>![image-20220122153758557](/Users/bells/Library/Application Support/typora-user-images/image-20220122153758557.png)</p>
+</li>
+<li>
+<p>python的<a href="https://docs.python.org/3/library/json.html#module-json.tool">json模块命令行</a></p>
+<p>具体使用方法可参考：https://docs.python.org/3/library/json.html#module-json.tool</p>
+<p>![image-20220313145318544](/Users/bells/Library/Application Support/typora-user-images/image-20220313145318544.png)</p>
+</li>
+</ol>
+<h3 id="格式化sql">格式化sql</h3>
+<p>sublime插件<a href="https://github.com/kufii/sublime-sql-formatter">sublime-sql-formatter</a></p>
+<p>该插件依赖于node.js和cli-sql-formatter，安装命令：<code>npm install -g cli-sql-formatter</code></p>
+<p>然后再安装sql-formatter：打开sublime text，按下Ctrl+Shift+P,输入 install 调出 Package Control: Install Package 选项，按下回车，
+输入sql-formatter，按下回车，安装插件。</p>
+<p>具体安装使用方法参考：https://github.com/kufii/sublime-sql-formatter</p>
+<p>效果：</p>
+<p>当我们把sql文本放到sublime中，可以输入快捷键：command+shift+p，然后再输入sql，就会出现sublime-sql-formatter提供的各种工具</p>
+<p>![image-20220313151431625](/Users/bells/Library/Application Support/typora-user-images/image-20220313151431625.png)</p>
+<p>选中Format SQL 直接按enter建，即可：</p>
+<p>![image-20220313151515089](/Users/bells/Library/Application Support/typora-user-images/image-20220313151515089.png)</p>
+<p>当然还有其他插件：SqlBeautifier</p>
+<h2 id="sublime3开启vim命令模式">sublime3开启vim命令模式</h2>
+<p>在菜单栏中： Preferences -&gt; Settings 即可打开配置文件进行编辑，将 ignored_packages 项的[]里面的<code>Vintage</code> 删掉。</p>
+<p>任意模式下按Esc键进入 命令模式(command mode)：</p>
+<p>![image-20220313153041923](/Users/bells/Library/Application Support/typora-user-images/image-20220313153041923.png)</p>
+<p>再按i键等，会进入插入模式(insert mode):</p>
+<p>![image-20220313153108079](/Users/bells/Library/Application Support/typora-user-images/image-20220313153108079.png)</p>
+<p>这样就可以愉快的使用vim命令模式了。</p>
+<h2 id="mysql字符集是否区分大小写">mysql字符集是否区分大小写</h2>
+<p>在mysql中存在着各种排序校对规则，这会影响到大小写敏感，全角半角等问题</p>
+<p>utf8_bin：utf8_bin将字符串中的每一个字符用二进制数据存储，区分大小写。</p>
+<p>utf8_general_ci：utf8_genera_ci不区分大小写，ci为case insensitive的缩写，即大小写不敏感。</p>
+<p>utf8_general_cs：utf8_general_cs区分大小写，cs为case sensitive的缩写，即大小写敏感。有些版本可能不支持该字符集。</p>
+<p>另外一种方案：使用mysql 的<code>BINARY</code> 关键字使搜索区分大小写。在sql中加入<code>BINARY</code> 关键字，或者在创建表的时候使用。</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/">格式化</a>
+
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/json/">json</a>
+
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/mysql/">mysql</a>
+
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/sublime/">sublime</a>
+
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/pretty-json/">Pretty JSON</a>
+
+  <a class="tag tag--primary tag--small" href="https://bells.github.io/tags/jq/">jq</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://bells.github.io/post/es_plugin/" data-tooltip="开发ElasticSearch插件就是这么简单" aria-label="PREVIOUS: 开发ElasticSearch插件就是这么简单">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://bells.github.io/post/2022-01/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://bells.github.io/post/2022-01/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://bells.github.io/post/2022-01/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/bells.github.io\/post\/2022-01\/';
+        
+          this.page.identifier = '\/post\/2022-01\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bells';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 <a href="https://github.com/bells">watson, bells</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://bells.github.io/post/es_plugin/" data-tooltip="开发ElasticSearch插件就是这么简单" aria-label="PREVIOUS: 开发ElasticSearch插件就是这么简单">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://bells.github.io/post/2022-01/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://bells.github.io/post/2022-01/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://bells.github.io/post/2022-01/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbells.github.io%2Fpost%2F2022-01%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fbells.github.io%2Fpost%2F2022-01%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbells.github.io%2Fpost%2F2022-01%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://bells.github.io/image/avatar.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">watson zhu(bells)</h4>
+    
+      <div id="about-card-bio">keep the faith!</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        程序员&amp;跑者
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://bells.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://bells.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
